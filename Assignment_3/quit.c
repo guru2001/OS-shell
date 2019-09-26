@@ -7,7 +7,9 @@ void quit(char **command,int i)
 		{
 			printf("Enter Correct Number of Arguements\n");
 		}
-		else exit(0);
-
+		else {
+			while(1)
+			exit(0);
+			}
 	}
 }

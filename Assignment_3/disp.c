@@ -27,7 +27,6 @@ void sigtstpHandler()
 	pr[++i] = fg_pid;
 	// printf("%d %d\n",pr[i],fg_pid );
 	strcpy(coma[i],fg_proc);
-	printf("%s\n",fg_proc);
 	fg_pid = -2;
 	// printf("%s\n",command[0]);
 }
@@ -206,7 +205,7 @@ int main(int argc,char **argv)
 		}
 		if(strstr(token[c],"<") || strstr(token[c],">"))
 		{
-			redirect(token[c],i);
+			redirect(token[c]);
 			continue;
 		}	
 			int f4 = 0;

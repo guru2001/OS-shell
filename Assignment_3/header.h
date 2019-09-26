@@ -37,4 +37,6 @@ extern void kjob(char **command,int i);
 extern void overkill(char **command,int i);
 extern void quit(char **command,int i);
 extern void bg(char **command,int i);
-extern void redirect(char *command,int i);
+extern void redirect(char *command);
+extern void End_Spaces(char * str);
+extern void Start_Spaces(char * str);

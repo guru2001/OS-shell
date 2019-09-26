@@ -33,6 +33,13 @@ void pip(char *command)
 	stdout = dup(1);
 	while(it < a)
 	{
+	// int pidfd = fork();
+	// if(pidfd == -1)
+	// {
+	// printf("Forkerror\n");
+	// }
+	// if(pidfd == 0)
+	// {	
 	if(it == 0)
 	{		
 		pipe(pipefd);
@@ -59,7 +66,7 @@ void pip(char *command)
 		int c1c = 0;
 		while(c1[c1c] != NULL)
 		{
-		if(strstr(c1[c1c],">") != NULL || strstr(c1[c1c],"<") != NULL)
+		if(strstr(c1[c1c],">") != NULL || strstr(c1[c1c],"<") != NULL || strstr(c1[c1c],">>") != NULL)
 		{
 			red++;
 		}
@@ -91,14 +98,16 @@ void pip(char *command)
 				strcat(com," ");
 				strcat(com,c1[q]);
 			}
-			printf("%s\n",com );
-			redirect(com,c1c);
+			printf("%s\n",com);
+			redirect(com);
 		}
 		if(dup2(stdout,1) < 0)
 			perror("stdout");
 		if(dup2(stdin,0) < 0)
 		perror("stdin");			
+		// }
 		it++;
+			// waitpid(pidfd,NULL,0);
 	}
 
 }

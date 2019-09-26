@@ -1,46 +1,32 @@
+q
 clear
 quit
-
-a<wc
-ls|wc > a
-quit
-it
-wc
-ls |wc < a
-clear
-quit
-
-quit
-quit
-quit
-quit
-quit
-quit
-
-l
-l
-l
-l
-l
-l
-quit
-ls|wc
-l
-l
-l
-l
-l
-l
-l
-ls|wc
+t a
+cat a >> a
+cat a
+sort < a |wc
 jobs
+overkill
 quit
+
+t
+cat output.txt
+clear
+sort < disp.c
+sort -r < a
+sort -r < disp.c
+clear
+sort < ls.c > yout
+cat yout
+ls|w > a
+cay a
+cat a
 quit
- -5
-cat disp.c|head -5
-cat disp.c|head -10|
-cat disp.c|||||
-cat disp.c|wc||||
+bs
+overkill
+jobs
+clear
+sp.c|wc||||
 cat disp.c |
 cat disp.c | amma
 jobs
@@ -68,4 +54,7 @@ quit
 quit
 quit
 quit
+quit
+cleR
+clear
 quit

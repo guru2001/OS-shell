@@ -1,0 +1,498 @@
+
+
+
+
+
+
+
+
+
+
+
+           	{
+           		{
+           		}
+        {
+        {
+        }
+        }
+    {
+    {
+    {
+    }
+    }
+    }
+{
+{
+{
+{
+{
+}
+}
+}
+}
+}
+	
+	        }
+	{
+	{
+	{
+	{
+	{
+	}
+	}
+	}
+	}
+	}
+		
+		
+		{
+		{
+		{
+		{
+		{
+		{
+		{
+		{  	
+		{	
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+		}	
+			
+			
+			
+			{
+			{
+			{
+			}
+			}
+			}
+				{
+				{
+				}
+				}	
+					{
+					{
+					}
+					}
+			bg(token1,i);
+           			break;
+					break;
+		break;
+			cd(token1,i,d1);
+		ch++;
+char **coma;
+		char *command;
+char *d1;
+char d5[1024];
+char *fg_proc;
+					char path[1024];
+		char pwdir[1024];
+char *storage[21];
+		char *token[1000];
+			char *token1[1000];
+		char uname[1024],hname[1024],dir_name[1024];
+			chdir(dir_name);
+	coma = (char **)malloc(1024 * sizeof(char *)); 
+		coma[x] = (char *)malloc(1024); 
+		command = (char *)malloc(1024);
+			continue;
+			continue;
+			continue;
+			continue;
+			continue;
+	d1 = (char *)malloc(1024);
+		dir_name[1023] = '\0';
+			echo(token1,i);
+			else 
+			else if(strlen(dir_name) == strlen(d1))
+				else printf("%s@%s:%s >",uname,hname,d1);
+		else printf("%s@%s ~ >",uname,hname);
+		End_Spaces(command);
+					f4 =1;
+	fd1 = open("history",O_CREAT | O_RDWR,0700);
+	fg_pid = -2;
+	fg_pid = -2;
+	fg_proc = (char *)malloc(1024 * sizeof(char)); 
+	for( ; i >= 0 ;i--)
+		for(int c=0; c<a ;c++)
+	for(int i=0;i<21;i++)
+					for(int i = strlen(d1) + 1 ; i < strlen(dir_name) ; i++)
+			for(int l=0;l<strlen(token[c]);l++)
+	for(int m = 0;m < 1024;m++)
+	for(int x = 0;x<1024;x++)
+           		for(m;m<1024;m++)
+		//getcwd(d1, sizeof(d1));
+			getcwd(d5, sizeof(d5));				
+		getcwd(dir_name, sizeof(dir_name));
+		gethostname(hname, sizeof(hname));
+		getlogin_r(uname, sizeof(uname));
+			history(token1,i,fd1,st);
+		hname[1023] = '\0';
+            i++;
+        i++;
+        i = 0;
+			i = 0;
+	 	if(ch == 0)
+			if(ch != 0)
+			if(ch != 0)
+			if(chdir(pwdir) < 0)
+			if(f4 == 0)
+		if(fgets(command, 1024, stdin) == NULL)
+	if(fg_pid == -2)
+    if(index != 0)
+				if((int)token[c][l] != 32)
+		if(pr[i] != -2)
+           			if(pr[m] == val)
+		if(st==21)
+		if(strcmp(command,"\n") == 0)
+        if(str[i] != ' ' && str[i] != '\t' && str[i] != '\n')  //Finding last known character index
+			if(strlen(dir_name) < strlen(d1))
+		if(strlen(pwdir) >  8)
+				if(strstr(dir_name,d1))
+		if(strstr(token[c],"|"))
+		if(strstr(token[c],"<") || strstr(token[c],">"))
+		if(token[0] == NULL)
+        if(val > 0)
+#include "header.h"
+        index++;
+            index= i;
+		int a=0,p3[100],p3c = 0,i=0;
+	int ch =0 ;
+			int f4 = 0;
+int fd1;
+int fg_pid;
+	int i = 1023;
+    int index = 0, i, j;
+    int index = 1 , i = 0;
+           		int m = 0;
+int main(int argc,char **argv)
+int *pr;
+		int red = 0;
+int st = 0;
+		int sta;
+ 		int val = waitpid(-1,&sta,WNOHANG); 
+					int x = 0;
+			jobs(token1,i);
+			kjob(token1,i);
+			lseek(fd1,0,SEEK_SET);
+			ls(token1,i);
+			overkill(token1,i);
+					path[x] = '\0';
+						path[x] = dir_name[i]; 
+			perror("change");
+			pinfo(token1,i);
+			pip(token[c]);
+	pr[++i] = fg_pid;
+	        	print();
+			print();
+			print();
+		print();
+	// printf("%d %d\n",pr[i],fg_pid );
+	// printf("%d\n",i);
+		printf("\n");
+           		printf("\n%s with pid %d has finished\n",coma[m],pr[m]);
+	// printf("%s\n",command[0]);
+					// printf("%s\n",path );
+				printf("%s@%s:%s >",uname,hname,dir_name);
+					printf("%s@%s: ~/%s >",uname,hname,path);
+						printf("%s@%s ~ >",uname,hname);
+	pr = (int *)malloc(1024*(sizeof(int)));
+	        	pr[m] = -2;
+		pr[m] = -2;
+			process(token1,i);
+			// *pwdir = *pwdir + 1;			{
+			pwd(token1,i);
+			quit(token1,i);
+			redirect(token[c]);
+	return;
+			seten(token1,i);
+	signal(SIGINT, sigintHandler);
+	signal(SIGTSTP,sigtstpHandler);
+		st++;
+			st = 1;
+		st = 1;
+		Start_Spaces(command);
+		storage[i] = (char*)malloc(1024*sizeof(char));
+	strcpy(coma[i],fg_proc);
+			strcpy(d1,d5);  //Root mama idi --a.out unna path
+		strcpy(d1,dir_name);
+		strcpy(pwdir,argv[0]);
+			strcpy(&pwdir[strlen(pwdir) - 6],"\0");
+		strcpy(storage[st],command);
+        str[i] = '\0'; 
+    str[index + 1] = '\0';
+            str[i] = str[i + index];
+		token[0] = strtok(command,";");
+			token1[0] = strtok(token[c], " "); 
+				token1[++i] = strtok(NULL," "); 
+			token[++a] = strtok(NULL,";");
+		uname[1023] = '\0';
+			unseten(token1,i);
+void End_Spaces(char * str)
+void sigintHandler()
+void sigtstpHandler()
+void Start_Spaces(char * str)
+	while(1)
+    while(str[i] != '\0')
+        while(str[i + index] != '\0')       //Shifting
+    while(str[index] == ' ' || str[index] == '\t' || str[index] == '\n') //Finding first known character index
+			while(token1[i] != NULL)
+		while(token[a] != NULL)
+		write(fd1,storage[st],strlen(command));
+						x++;
+
+
+
+
+
+
+
+
+
+
+
+           	{
+           		{
+           		}
+        {
+        {
+        }
+        }
+    {
+    {
+    {
+    }
+    }
+    }
+{
+{
+{
+{
+{
+}
+}
+}
+}
+}
+	
+	        }
+	{
+	{
+	{
+	{
+	{
+	}
+	}
+	}
+	}
+	}
+		
+		
+		{
+		{
+		{
+		{
+		{
+		{
+		{
+		{  	
+		{	
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+		}	
+			
+			
+			
+			{
+			{
+			{
+			}
+			}
+			}
+				{
+				{
+				}
+				}	
+					{
+					{
+					}
+					}
+			bg(token1,i);
+           			break;
+					break;
+		break;
+			cd(token1,i,d1);
+		ch++;
+char **coma;
+		char *command;
+char *d1;
+char d5[1024];
+char *fg_proc;
+					char path[1024];
+		char pwdir[1024];
+char *storage[21];
+		char *token[1000];
+			char *token1[1000];
+		char uname[1024],hname[1024],dir_name[1024];
+			chdir(dir_name);
+	coma = (char **)malloc(1024 * sizeof(char *)); 
+		coma[x] = (char *)malloc(1024); 
+		command = (char *)malloc(1024);
+			continue;
+			continue;
+			continue;
+			continue;
+			continue;
+	d1 = (char *)malloc(1024);
+		dir_name[1023] = '\0';
+			echo(token1,i);
+			else 
+			else if(strlen(dir_name) == strlen(d1))
+				else printf("%s@%s:%s >",uname,hname,d1);
+		else printf("%s@%s ~ >",uname,hname);
+		End_Spaces(command);
+					f4 =1;
+	fd1 = open("history",O_CREAT | O_RDWR,0700);
+	fg_pid = -2;
+	fg_pid = -2;
+	fg_proc = (char *)malloc(1024 * sizeof(char)); 
+	for( ; i >= 0 ;i--)
+		for(int c=0; c<a ;c++)
+	for(int i=0;i<21;i++)
+					for(int i = strlen(d1) + 1 ; i < strlen(dir_name) ; i++)
+			for(int l=0;l<strlen(token[c]);l++)
+	for(int m = 0;m < 1024;m++)
+	for(int x = 0;x<1024;x++)
+           		for(m;m<1024;m++)
+		//getcwd(d1, sizeof(d1));
+			getcwd(d5, sizeof(d5));				
+		getcwd(dir_name, sizeof(dir_name));
+		gethostname(hname, sizeof(hname));
+		getlogin_r(uname, sizeof(uname));
+			history(token1,i,fd1,st);
+		hname[1023] = '\0';
+            i++;
+        i++;
+        i = 0;
+			i = 0;
+	 	if(ch == 0)
+			if(ch != 0)
+			if(ch != 0)
+			if(chdir(pwdir) < 0)
+			if(f4 == 0)
+		if(fgets(command, 1024, stdin) == NULL)
+	if(fg_pid == -2)
+    if(index != 0)
+				if((int)token[c][l] != 32)
+		if(pr[i] != -2)
+           			if(pr[m] == val)
+		if(st==21)
+		if(strcmp(command,"\n") == 0)
+        if(str[i] != ' ' && str[i] != '\t' && str[i] != '\n')  //Finding last known character index
+			if(strlen(dir_name) < strlen(d1))
+		if(strlen(pwdir) >  8)
+				if(strstr(dir_name,d1))
+		if(strstr(token[c],"|"))
+		if(strstr(token[c],"<") || strstr(token[c],">"))
+		if(token[0] == NULL)
+        if(val > 0)
+#include "header.h"
+        index++;
+            index= i;
+		int a=0,p3[100],p3c = 0,i=0;
+	int ch =0 ;
+			int f4 = 0;
+int fd1;
+int fg_pid;
+	int i = 1023;
+    int index = 0, i, j;
+    int index = 1 , i = 0;
+           		int m = 0;
+int main(int argc,char **argv)
+int *pr;
+		int red = 0;
+int st = 0;
+		int sta;
+ 		int val = waitpid(-1,&sta,WNOHANG); 
+					int x = 0;
+			jobs(token1,i);
+			kjob(token1,i);
+			lseek(fd1,0,SEEK_SET);
+			ls(token1,i);
+			overkill(token1,i);
+					path[x] = '\0';
+						path[x] = dir_name[i]; 
+			perror("change");
+			pinfo(token1,i);
+			pip(token[c]);
+	pr[++i] = fg_pid;
+	        	print();
+			print();
+			print();
+		print();
+	// printf("%d %d\n",pr[i],fg_pid );
+	// printf("%d\n",i);
+		printf("\n");
+           		printf("\n%s with pid %d has finished\n",coma[m],pr[m]);
+	// printf("%s\n",command[0]);
+					// printf("%s\n",path );
+				printf("%s@%s:%s >",uname,hname,dir_name);
+					printf("%s@%s: ~/%s >",uname,hname,path);
+						printf("%s@%s ~ >",uname,hname);
+	pr = (int *)malloc(1024*(sizeof(int)));
+	        	pr[m] = -2;
+		pr[m] = -2;
+			process(token1,i);
+			// *pwdir = *pwdir + 1;			{
+			pwd(token1,i);
+			quit(token1,i);
+			redirect(token[c]);
+	return;
+			seten(token1,i);
+	signal(SIGINT, sigintHandler);
+	signal(SIGTSTP,sigtstpHandler);
+		st++;
+			st = 1;
+		st = 1;
+		Start_Spaces(command);
+		storage[i] = (char*)malloc(1024*sizeof(char));
+	strcpy(coma[i],fg_proc);
+			strcpy(d1,d5);  //Root mama idi --a.out unna path
+		strcpy(d1,dir_name);
+		strcpy(pwdir,argv[0]);
+			strcpy(&pwdir[strlen(pwdir) - 6],"\0");
+		strcpy(storage[st],command);
+        str[i] = '\0'; 
+    str[index + 1] = '\0';
+            str[i] = str[i + index];
+		token[0] = strtok(command,";");
+			token1[0] = strtok(token[c], " "); 
+				token1[++i] = strtok(NULL," "); 
+			token[++a] = strtok(NULL,";");
+		uname[1023] = '\0';
+			unseten(token1,i);
+void End_Spaces(char * str)
+void sigintHandler()
+void sigtstpHandler()
+void Start_Spaces(char * str)
+	while(1)
+    while(str[i] != '\0')
+        while(str[i + index] != '\0')       //Shifting
+    while(str[index] == ' ' || str[index] == '\t' || str[index] == '\n') //Finding first known character index
+			while(token1[i] != NULL)
+		while(token[a] != NULL)
+		write(fd1,storage[st],strlen(command));
+						x++;

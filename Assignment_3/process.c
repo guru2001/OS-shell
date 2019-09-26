@@ -32,6 +32,7 @@ void process(char **command,int i)
 		{    	
 			nv = 1;
 			printf("No such command\n");
+			kill(getpid(),SIGTERM);
 	    	return;
 	    }	   
 	}
