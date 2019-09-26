@@ -17,6 +17,10 @@
 extern char *d1;
 extern char **coma;
 extern int *pr;
+extern char *fg_proc;
+extern int fg_pid;
+extern int st;
+extern int fd1;
 extern void jobs(char **command,int i);
 extern void pwd(char **command,int i);
 extern void echo(char **command,int i);
@@ -31,3 +35,6 @@ extern void seten(char **command,int i);
 extern void unseten(char **command,int i);
 extern void kjob(char **command,int i);
 extern void overkill(char **command,int i);
+extern void quit(char **command,int i);
+extern void bg(char **command,int i);
+extern void redirect(char *command,int i);

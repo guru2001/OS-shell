@@ -28,76 +28,77 @@ void pip(char *command)
 	}
 	int it = 0;
 	int pipefd[2];
-	// pipe(pipefd);
 	int stdin,stdout;
 	stdin = dup(0);
 	stdout = dup(1);
 	while(it < a)
 	{
-
-	//printf("sdsaddsa\n");
-	// pid_t pid;
-	// pid = fork();
-	// printf("[%d]\n", pid);
-	// if(pid < 0)
-	// {
-	// 	perror("Fork - pipe");
-	// }
-	// if(pid == 0)
-	// {
 	if(it == 0)
 	{		
-		printf("vacha1\n");
 		pipe(pipefd);
 		dup2(pipefd[1],1);
 		close(pipefd[1]);
 	}
-	else if(it == 1)
+	else if(it == a-1)
 	{
-				printf("vacha\n");
 		dup2(pipefd[0],0);
 		close(pipefd[0]);
 	}
 	else 
 	{
-						printf("vacha2\n");
 		dup2(pipefd[0],0);
 		close(pipefd[0]);
+		
 		pipe(pipefd);
 		
 		dup2(pipefd[1],1);
 		close(pipefd[1]);
 	}
+		int red = 0;
 		c1[0] = strtok(token[it], " "); 
 		int c1c = 0;
 		while(c1[c1c] != NULL)
 		{
-		//printf("dasda\n");
+		if(strstr(c1[c1c],">") != NULL || strstr(c1[c1c],"<") != NULL)
+		{
+			red++;
+		}
 		c1[++c1c] = strtok(NULL," "); 
 		}
-			process(c1,c1c);	
+			if(!red)
+			{
+			process(c1,c1c);
 			pwd(c1,c1c);
 			echo(c1,c1c);
 			ls(c1,c1c);
 			cd(c1,c1c,d1);
 			pinfo(c1,c1c);
+			history(c1,c1c,fd1,st);
 			seten(c1,c1c);
 			unseten(c1,c1c);
-			// printf("else\n");
-			// if (execvp(c1[0],c1) < 0)
-			// {
-			// 	kill(getpid(),SIGTERM);
-			// 	return;
-			// }	
-
-		if(dup2(stdout,1)<0)
+			jobs(c1,c1c);
+			kjob(c1,c1c);
+			overkill(c1,c1c);
+			quit(c1,c1c);
+			bg(c1,c1c);
+			}
+		else
+		{
+			char com[1024];
+			strcpy(com,c1[0]);
+			for(int q = 1; q < c1c;q++)
+			{
+				strcat(com," ");
+				strcat(com,c1[q]);
+			}
+			printf("%s\n",com );
+			redirect(com,c1c);
+		}
+		if(dup2(stdout,1) < 0)
 			perror("stdout");
-		// close(stdout);
-		if(dup2(stdin,0)<0)
+		if(dup2(stdin,0) < 0)
 		perror("stdin");			
-		// close(stdin);
 		it++;
-		printf("%d\n",it );	
 	}
-	print();
+
 }

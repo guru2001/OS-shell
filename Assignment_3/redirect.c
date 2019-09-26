@@ -1,56 +1,54 @@
 #include "header.h"
-void redirect(char **command,int red,int i)
+void redirect(char *command,int i)
 {
 	
+	int inp = 0,out = 0;
 	char in_file[1024], out_file[1024];
-	in_file = NULL;
-	out_file = NULL;
-	int com_out = 0,com_in = 0,in = 0,out = 0;
-	if(!strcmp(command[i-1],">"))
+	char *token[1024];
+	if(strstr(command,">") != NULL)
 	{
-		perror("Less number of arguements");
+		out = 1;
 	}
-	if(!strcmp(command[0],"<"))
+	if(strstr(command,"<") != NULL)
 	{
-		perror("Less number of arguements");
+		inp = 1;
 	}
+	if(inp == 1)
+	{
+	token[0] = strtok(command,"<"); 	
+	}		
+	else strcpy(token[0],command);
+		printf("%s\n",token[0]);
+	token[1] = strtok(NULL,"<");
+	if(token[1] = NULL)
+	{	
+		token[2] = strtok(token[1],">");
+	}
+	token[3] = strtok(NULL,">");
+	printf("%s %s %s\n",token[0],token[1],token[3]);
+	// if(inp == 1 && inp1 != 0)
+	// {
+	// 	strcpy(in_file,command[inp1 -1]);
+	// }
 
-	for(int a=0;a<i;a++)
-	{
-		if(!strcmp(command[a],">") && a != i-1)
-		{
-		strcmp(out_file,command[a+1]);
-		com_out = a;
-		}
-		else if(!strcmp(command[a],"<") && a!=0)
-		{	
-		strcmp(in_file,command[a-1]);
-		com_in = a;
-		}
-	}
-	int fd_out,fd_in;
-	fd_in = open(in_file, O_WRONLY);
+	// int out1 = i - 1;
+	// for(out1 = i - 1; out1 >= 0;out1--)
+	// {
 	
-	if(fd_in == -1) 
-    {
-      perror("Failed to open file");
-    }
+	// }
+	// if(out == 1 && out1 != 0)
+	// {
+	// 	strcpy(out_file,command[out1 + 1]);
+	// }
+	// int t = 0;
+	// for(int c = inp1 + 1;c < out1;c++)
+	// {
+	// 	strcpy(token[t],command[c]);
+	// 	printf("%s\n",token[t]);
+	// 	t++;
+	// }
+	// printf("%s %s",in_file,out_file);
 
-     if(dup2(0,fd_in) != 1)  // 0 refers to stdout
-      perror("dup2 fail");
 
-    close(fd_in);
-
-	fd_out = open(out_file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-
-    if(fd_out == -1) 
-    {
-      perror("Failed to open file");
-    }
-
-    if(dup2(fd_out, 1) != 1)  // 1 refers to stdout
-      perror("dup2 fail");
-
-    close(fd_out);
-
+	
 }

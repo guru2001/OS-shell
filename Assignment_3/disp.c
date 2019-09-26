@@ -6,6 +6,31 @@ int st = 0;
 int fd1;
 char **coma;
 int *pr;
+char *fg_proc;
+int fg_pid;
+void sigintHandler()
+{
+	fg_pid = -2;
+
+}
+void sigtstpHandler()
+{
+	if(fg_pid == -2)
+	return;
+	int i = 1023;
+	for( ; i >= 0 ;i--)
+	{
+		if(pr[i] != -2)
+		break;
+	}
+	// printf("%d\n",i);
+	pr[++i] = fg_pid;
+	// printf("%d %d\n",pr[i],fg_pid );
+	strcpy(coma[i],fg_proc);
+	printf("%s\n",fg_proc);
+	fg_pid = -2;
+	// printf("%s\n",command[0]);
+}
 void End_Spaces(char * str)
 {
     int index = 1 , i = 0;
@@ -40,8 +65,12 @@ void Start_Spaces(char * str)
 }
 int main(int argc,char **argv)
 {
+	signal(SIGINT, sigintHandler);
+	signal(SIGTSTP,sigtstpHandler);
 	pr = (int *)malloc(1024*(sizeof(int)));
 	coma = (char **)malloc(1024 * sizeof(char *)); 
+	fg_proc = (char *)malloc(1024 * sizeof(char)); 
+
 	for(int m = 0;m < 1024;m++)
 	{
 		pr[m] = -2;
@@ -131,7 +160,8 @@ int main(int argc,char **argv)
 		}
 		char *command;
 		command = (char *)malloc(1024);
-		fgets(command, 1024, stdin);
+		if(fgets(command, 1024, stdin) == NULL)
+		printf("\n");
 		int red = 0;
 		if(strcmp(command,"\n") == 0)
 		{
@@ -152,12 +182,7 @@ int main(int argc,char **argv)
 
 		End_Spaces(command);
 		Start_Spaces(command);
-		
-		if(strstr(command,"|"))
-		{
-			pip(command);
-			continue;
-		}
+
 		char *token[1000];
 		token[0] = strtok(command,";");
 		int a=0,p3[100],p3c = 0,i=0;
@@ -171,8 +196,19 @@ int main(int argc,char **argv)
 		{	
 			token[++a] = strtok(NULL,";");
 		}
+
 		for(int c=0; c<a ;c++)
 		{  	
+		if(strstr(token[c],"|"))
+		{
+			pip(token[c]);
+			continue;
+		}
+		if(strstr(token[c],"<") || strstr(token[c],">"))
+		{
+			redirect(token[c],i);
+			continue;
+		}	
 			int f4 = 0;
 			for(int l=0;l<strlen(token[c]);l++)
 			{
@@ -192,7 +228,7 @@ int main(int argc,char **argv)
 			{
 				token1[++i] = strtok(NULL," "); 
 			}
-
+			
 			process(token1,i);
 			pwd(token1,i);
 			echo(token1,i);
@@ -205,6 +241,8 @@ int main(int argc,char **argv)
 			jobs(token1,i);
 			kjob(token1,i);
 			overkill(token1,i);
+			quit(token1,i);
+			bg(token1,i);
 		}
 		print();
 		

@@ -13,14 +13,12 @@ void overkill(char **command,int i)
 	{
 		if(pr[q] != -2)
 		{
-		printf("ochad\n");
 		int pid = pr[q];	
 		if(kill(pid,9) < 0)
 		{
 			printf("Signal not sent\n");
 		}
-		// pr[q] = -2;
 		}
-		}
+	}
 	}
 }

@@ -43,6 +43,7 @@ void jobs(char **command,int i)
 
 					printf("[%d] %s %s[%d]\n",print,status,coma[q],pr[q]);
 					print++;
+		
 			}
 		}
 

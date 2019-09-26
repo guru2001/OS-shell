@@ -14,7 +14,7 @@ void ls(char **command,int i)
 			if(dir == NULL)
 			{
 				perror("Cannot find directory");
-				exit(-1);
+				// exit(-1);
 			}
 			while(d=readdir(dir))
 			{
@@ -37,7 +37,7 @@ void ls(char **command,int i)
 			if(dir == NULL)
 			{
 				perror("Cannot find directory");
-				exit(-1);
+				// exit(-1);
 			}
 			while(d=readdir(dir))
 			{
@@ -54,7 +54,7 @@ void ls(char **command,int i)
 			if(dir==NULL)
 			{
 				perror("Cannot find directory");
-				exit(-1);
+				// exit(-1);
 			}
 			char buf[512];
 			int i1 =0;
@@ -143,7 +143,7 @@ void ls(char **command,int i)
 			if(dir==NULL)
 			{
 				perror("Cannot find directory");
-				exit(-1);
+				// exit(-1);
 			}
 			char buf[512];
 			int i1 =0;

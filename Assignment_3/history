@@ -1,282 +1,71 @@
-gedit a b
+clear
+quit
+
+a<wc
+ls|wc > a
+quit
+it
+wc
+ls |wc < a
+clear
+quit
+
+quit
+quit
+quit
+quit
+quit
+quit
+
+l
+l
+l
+l
+l
+l
+quit
+ls|wc
+l
+l
+l
+l
+l
+l
+l
+ls|wc
+jobs
+quit
+quit
+ -5
+cat disp.c|head -5
+cat disp.c|head -10|
+cat disp.c|||||
+cat disp.c|wc||||
+cat disp.c |
+cat disp.c | amma
+jobs
+jobs
 gedit a &
-gedit a b
 jobs
 overkill
-bs
-gedit a 3 3 3
-gedit c
-gedit d 
-gedit e
-firefox
-gedit a
-jobs
-overkill
-jobs
-jobs
-gedit a 
-jobs
-it c
-gedit c &
-guru
-jobs
-.c echo.c pipe.c 
-19 ?xdm?   7:22m  0.06s /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
-else
-gururavi@gururavi-Inspiron-5570: ~ >
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
-gururavi@gururavi-Inspiron-5570: ~ >No such command
+l
+l
+l
+l
+l
+l
+l
+l
+l
+quit
+quit
+quit
+quit
+quit
+quit
+quit
+quit
+quit
+quit
+quit
+quit
