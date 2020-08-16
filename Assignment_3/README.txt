@@ -64,3 +64,57 @@ hist.c
 .Implemented history 
 .written command length arguements in file
 .read it 
+
+piping.c
+.Implemented piping using one pipefd array of 2
+.I duplicate stdin and stdout
+.Then in 1st iteration write end is dup2 to stdout
+.In last iteration read end is dup2 to stdin
+.In all other iterations both dup2 occur
+(This is done to transform output of 1 function to another function's input)
+.In every iteration after reading or writing I bring back both stdin or stdout
+
+redirection.c
+.Assuming one output and input redirection at max
+.First took cases onlu inp,only out(>> or >) and both
+.Output case dup2 the stdout to file(for >> append is used while opening)
+.Input case dup2 to stdin
+.Both 1st stdin dup2 and then stdout dup2
+.After every iteration it is stdin and stdout are restored back
+
+piping + redirection
+.I send it to pipe function,for implementation of commands send to redirection if it exists.
+
+jobs.c
+.Stored all bg processes pid into an array and printed the non negative values in array.
+.Initialized with -2 and after exiting changing value in array to -2 as a flag
+
+kjobs.c
+.Iterate the array to get jobid number of non negative values to get pid
+.Send signal using kill command 
+
+bg.c
+.Iterate to get the pid
+.Send SIGCONT to the process
+
+fg.c
+.Iterate and get the pid 
+.And wait till interrupt or completion
+
+cronjob.c
+.Assuming the input comes in the specified format
+.Take -t and -p seconds as it occurs in the same place
+.Send it to all commands inbuilt
+
+ctrl + c
+.signal --> SIGINT is sent when pressed which is handled by killing the present fg process
+
+ctrl + z
+.signal --> SIGTSTSP is sent when pressed which is handled by stopping the present fg process to bg
+.Stored it into bg array
+
+ctrl + d
+.While taking input of fgets if NULL is returned an extra line is printed.
+
+quit.c
+.When quit is entered exit(0)

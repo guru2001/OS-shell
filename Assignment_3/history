@@ -1,60 +1,60 @@
-q
+cat a
+cat disp.c
+jobs
 clear
 quit
-t a
-cat a >> a
-cat a
-sort < a |wc
+s
+quit
+kill
+gedit a
+jobs
+quit
+ -t 3 -p 6
+ls
+ls
+1uit
+quit
+&
+firefox &
+vim &
 jobs
 overkill
-quit
-
-t
-cat output.txt
 clear
-sort < disp.c
-sort -r < a
-sort -r < disp.c
+jobs
 clear
-sort < ls.c > yout
-cat yout
-ls|w > a
-cay a
+ls | wc
+ls > a
+clear
 cat a
+ls >> a
+cat a
+sort < a >> w
+cat a
+make
+./a.out
 quit
 bs
-overkill
+joba
 jobs
 clear
-sp.c|wc||||
-cat disp.c |
-cat disp.c | amma
-jobs
-jobs
-gedit a &
-jobs
-overkill
-l
-l
-l
-l
-l
-l
-l
-l
-l
-quit
-quit
-quit
-quit
-quit
-quit
-quit
-quit
-quit
-quit
-quit
-quit
-cleR
 clear
+quit
+< disp.c >> a
+cat a
+sort < disp.c >> a | wc
+clear
+ls | wc > a
+cat a
+cat a | wc
+cat disp.c | wc
+diff disp.c a.c | wc
+diff disp.c ls.c |wc
+diff disp.c ls.c | wc >> a
+cat a
+sort < a | wc
+quit
+make
+history
+clear
+quit
 quit

@@ -18,7 +18,7 @@ void seten(char **command,int i)
 	}
 	else 
 	{
-		if(strcmp(&command[2][0],"[") == 0 && strcmp(&command[2][strlen(command[2]) - 1],"]") == 0)
+		if(command[2][0] == '[' && command[2][strlen(command[2]) - 1] == ']')
 		{
 			command[2][strlen(command[2]) - 1] = '\0';
 			strcpy(command[2],&command[2][1]);

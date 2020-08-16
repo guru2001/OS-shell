@@ -8,15 +8,19 @@ char **coma;
 int *pr;
 char *fg_proc;
 int fg_pid;
+int inte;
+int ni;
+int nz;
 void sigintHandler()
 {
+	kill(fg_pid,SIGINT);
+	inte = 1;
 	fg_pid = -2;
-
 }
 void sigtstpHandler()
 {
-	if(fg_pid == -2)
-	return;
+	
+	kill(fg_pid,SIGTSTP);
 	int i = 1023;
 	for( ; i >= 0 ;i--)
 	{
@@ -24,11 +28,15 @@ void sigtstpHandler()
 		break;
 	}
 	// printf("%d\n",i);
+	if(pr[i] != fg_pid)
+	{
 	pr[++i] = fg_pid;
+	}
 	// printf("%d %d\n",pr[i],fg_pid );
 	strcpy(coma[i],fg_proc);
-	fg_pid = -2;
+	// fg_pid = -2;
 	// printf("%s\n",command[0]);
+	
 }
 void End_Spaces(char * str)
 {
@@ -64,9 +72,11 @@ void Start_Spaces(char * str)
 }
 int main(int argc,char **argv)
 {
+
 	signal(SIGINT, sigintHandler);
 	signal(SIGTSTP,sigtstpHandler);
 	pr = (int *)malloc(1024*(sizeof(int)));
+
 	coma = (char **)malloc(1024 * sizeof(char *)); 
 	fg_proc = (char *)malloc(1024 * sizeof(char)); 
 
@@ -203,7 +213,7 @@ int main(int argc,char **argv)
 			pip(token[c]);
 			continue;
 		}
-		if(strstr(token[c],"<") || strstr(token[c],">"))
+		if(strstr(token[c],"<") || strstr(token[c],">") ||  strstr(token[c],">>") )
 		{
 			redirect(token[c]);
 			continue;
@@ -227,7 +237,7 @@ int main(int argc,char **argv)
 			{
 				token1[++i] = strtok(NULL," "); 
 			}
-			
+			cronjob(token1,i);
 			process(token1,i);
 			pwd(token1,i);
 			echo(token1,i);
@@ -242,6 +252,8 @@ int main(int argc,char **argv)
 			overkill(token1,i);
 			quit(token1,i);
 			bg(token1,i);
+			fg(token1,i);
+
 		}
 		print();
 		

@@ -1,8 +1,8 @@
 #include "header.h"
-void bg(char **command,int i)
+void fg(char **command,int i)
 {
 	
-	if(strcmp(command[0],"bg") == 0)
+	if(strcmp(command[0],"fg") == 0)
 	{
 		if(i != 2)
 	{
@@ -22,7 +22,7 @@ void bg(char **command,int i)
 		if(print == ch)
 		{
 		pid = pr[q];
-		break;
+			break;
 		}
 		}
 	}
@@ -31,8 +31,14 @@ void bg(char **command,int i)
 			printf("No job id found\n");
 			return;
 		}
-		if(kill(pid,SIGCONT) < 0) //18
-		printf("Error in sending Signal\n");
-
+		else{
+			int statu;
+			kill(pid,SIGCONT);
+		waitpid(pid,&statu,WUNTRACED);
+		if(inte == 1)
+		pr[q] = -2; 
+		inte = 0;
+		}
+		
 	}
 }

@@ -5,7 +5,7 @@ void redirect(char *command)
 	int stdinCopy = dup(0);
 	char *c1[1024],*c2[1024];
 	int inp = 0,out = 0,b = 0,t = 0;
-	int fd1,fd2;
+	int fd,fd2;
 	char *token[1024];
 	for(int i = 0;i<1024;i++)
 	{
@@ -53,6 +53,7 @@ void redirect(char *command)
 				return;
 		}
 
+
 			process(c1,c1c);
 			pwd(c1,c1c);
 			echo(c1,c1c);
@@ -67,13 +68,13 @@ void redirect(char *command)
 			overkill(c1,c1c);
 			quit(c1,c1c);
 			bg(c1,c1c);	
-
+			fg(c1,c1c);
+			close(fd2);
 			if(dup2(stdinCopy,0) != 0)
 			{
 			printf("Dup2 error\n");
 			return;
 			}
-		
 
 	}	
 	if(inp == 0 && out == 1 && t == 0)
@@ -88,13 +89,13 @@ void redirect(char *command)
 		{
 		c1[++c1c] = strtok(NULL," "); 
 		}
-			fd1 = open(token[1],O_CREAT|O_WRONLY|O_TRUNC,0644);
-			if(fd1 < 0)
+			fd = open(token[1],O_CREAT|O_WRONLY|O_TRUNC,0644);
+			if(fd < 0)
 			{
 			printf("Opening error\n");
 			return;
 			}
-			if(dup2(fd1,1) != 1)
+			if(dup2(fd,1) != 1)
 			{
 				printf("Dup2 error\n");
 				return;
@@ -113,7 +114,7 @@ void redirect(char *command)
 			overkill(c1,c1c);
 			quit(c1,c1c);
 			bg(c1,c1c);	
-
+			fg(c1,c1c);
 			if(dup2(stdoutCopy,1) != 1)
 			{
 			printf("Dup2 error\n");
@@ -132,13 +133,13 @@ void redirect(char *command)
 		{
 		c1[++c1c] = strtok(NULL," "); 
 		}
-			fd1 = open(token[1],O_CREAT|O_WRONLY|O_APPEND,0644);
-			if(fd1 < 0)
+			fd = open(token[1],O_CREAT|O_WRONLY|O_APPEND,0644);
+			if(fd < 0)
 			{
 				printf("Opening error\n");
 				return;
 			}
-			if(dup2(fd1,1) != 1)
+			if(dup2(fd,1) != 1)
 			{
 			printf("Dup2 error\n");
 			return;
@@ -157,7 +158,7 @@ void redirect(char *command)
 			overkill(c1,c1c);
 			quit(c1,c1c);
 			bg(c1,c1c);	
-
+			fg(c1,c1c);
 			if(dup2(stdoutCopy,1) != 1)
 			{
 				printf("Dup2 error\n");
@@ -166,13 +167,12 @@ void redirect(char *command)
 	}
 	else if(b && t == 1)
 	{
-		printf("dsasdsa\n");
 		token[0] = strtok(command,">>"); 	//---command
 		token[1] = strtok(NULL,">>");  //---outfile
 		token[2] = strtok(token[0],"<"); 	
 		token[3] = strtok(NULL,"<"); // infile
-		printf("%s %s %s\n", token[0],token[1],token[3] );
-		c1[0] = strtok(token[2], " "); 
+		//printf("%s %s %s\n", token[0],token[1],token[3] );
+		c1[0] = strtok(token[0], " "); 
 		int c1c = 0;
 		while(c1[c1c] != NULL)
 		{
@@ -180,6 +180,8 @@ void redirect(char *command)
 		}
 		End_Spaces(token[3]);
 		Start_Spaces(token[3]);
+			End_Spaces(token[1]);
+		Start_Spaces(token[1]);
 		fd2 = open(token[3],O_RDONLY);
 		if(fd2 < 0)
 		{
@@ -191,25 +193,26 @@ void redirect(char *command)
 			printf("Dup2 error\n");
 				return;
 		}
-		fd1 = open(token[1],O_CREAT|O_WRONLY|O_APPEND,0644);
-		if(fd1 < 0)
+		fd = open(token[1],O_CREAT|O_WRONLY|O_APPEND,0644);
+		if(fd < 0)
 		{
 			printf("Opening error\n");
 			return;
 		}
-		if(dup2(fd1,1) != 1)
+
+		if(dup2(fd,1) != 1)
 		{
 		printf("Dup2 error\n");
 		return;
 		}
-		printf("%d %d\n",fd1,fd2);
+		
 			process(c1,c1c);
 			pwd(c1,c1c);
 			echo(c1,c1c);
 			ls(c1,c1c);
 			cd(c1,c1c,d1);
 			pinfo(c1,c1c);
-			history(c1,c1c,fd1,st);
+			history(c1,c1c,fd,st);
 			seten(c1,c1c);
 			unseten(c1,c1c);
 			jobs(c1,c1c);
@@ -217,6 +220,7 @@ void redirect(char *command)
 			overkill(c1,c1c);
 			quit(c1,c1c);
 			bg(c1,c1c);	
+			fg(c1,c1c);
 			if(dup2(stdoutCopy,1) != 1)
 			{
 			printf("Dup2 error\n");
@@ -228,7 +232,74 @@ void redirect(char *command)
 			return;
 			}
 
-	}	
+	}
+	else if(b && out == 1)
+	{
+		token[0] = strtok(command,">"); 	//---command
+		token[1] = strtok(NULL,">");  //---outfile
+		token[2] = strtok(token[0],"<"); 	
+		token[3] = strtok(NULL,"<"); // infile
+		c1[0] = strtok(token[0], " "); 
+		int c1c = 0;
+		while(c1[c1c] != NULL)
+		{
+		c1[++c1c] = strtok(NULL," "); 
+		}
+		End_Spaces(token[3]);
+		Start_Spaces(token[3]);
+			End_Spaces(token[1]);
+		Start_Spaces(token[1]);
+		fd2 = open(token[3],O_RDONLY);
+		if(fd2 < 0)
+		{
+		printf("Error Reading the file\n");
+		return;
+		}
+		if(dup2(fd2,0) != 0)
+		{
+			printf("Dup2 error\n");
+				return;
+		}
+		fd = open(token[1],O_CREAT|O_WRONLY|O_TRUNC,0644);
+		if(fd < 0)
+		{
+			printf("Opening error\n");
+			return;
+		}
+		if(dup2(fd,1) != 1)
+		{
+		printf("Dup2 error\n");
+		return;
+		}
+		
+			process(c1,c1c);
+			pwd(c1,c1c);
+			echo(c1,c1c);
+			ls(c1,c1c);
+			cd(c1,c1c,d1);
+			pinfo(c1,c1c);
+			history(c1,c1c,fd,st);
+			seten(c1,c1c);
+			unseten(c1,c1c);
+			jobs(c1,c1c);
+			kjob(c1,c1c);
+			overkill(c1,c1c);
+			quit(c1,c1c);
+			bg(c1,c1c);	
+			fg(c1,c1c);
+			if(dup2(stdoutCopy,1) != 1)
+			{
+			printf("Dup2 error\n");
+			return;
+			}
+			if(dup2(stdinCopy,0) != 0)
+			{
+			printf("Dup2 error\n");
+			return;
+			}
 
+	}		
+	close(stdinCopy);
+	close(stdoutCopy);
 		
 }
